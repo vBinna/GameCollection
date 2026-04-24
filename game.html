@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Game</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <a class="back" href="index.html">⬅ Back</a>
+
+  <h1 id="gameTitle">Loading...</h1>
+
+  <div class="frame-wrapper" id="wrapper">
+    <iframe id="gameFrame"></iframe>
+  </div>
+
+  <p class="desc" id="gameDesc"></p>
+
+  <script>
+    const params = new URLSearchParams(window.location.search);
+    const id = params.get("id");
+
+    const games = {
+      1: {
+        title: "Birdy!",
+        src: "games/Birdy!/index.html",
+        desc: "Don't touch the pipes! Press SPACE to fly!"
+      },
+      2: {
+        title: "Super Birdy!",
+        src: "",
+        desc: "Coming Soon!"
+      }
+    };
+
+    const game = games[id];
+
+    if (game) {
+      document.getElementById("gameTitle").innerText =
+        game.title || "Coming Soon";
+
+      document.getElementById("gameDesc").innerText =
+        game.desc || "";
+
+      if (game.src) {
+        document.getElementById("gameFrame").src = game.src;
+      } else {
+        document.getElementById("wrapper").style.display = "none";
+      }
+    } else {
+      document.body.innerHTML = "<h1>Game not found</h1>";
+    }
+
+    function resizeGame() {
+      const scale = Math.min(
+        window.innerWidth / 1920,
+        window.innerHeight / 1080
+      );
+
+      document.getElementById("wrapper").style.transform =
+        `scale(${scale})`;
+    }
+
+    window.addEventListener("resize", resizeGame);
+    resizeGame();
+  </script>
+
+</body>
+</html>

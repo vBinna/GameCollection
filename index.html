@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>The Key</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <h1>🧠 The Key is to be ذكي</h1>
+
+  <div class="container">
+
+    <div class="game-card" onclick="openGame(1)">
+      <img class="icon" src="images/birdy.png">
+      <h2>Birdy!</h2>
+    </div>
+
+    <div class="game-card coming" onclick="openGame(2)">
+      <img class="icon" src="images/sparkles.png">
+      <h2>Super Birdy!</h2>
+    </div>
+
+    <div class="game-card coming" onclick="openGame(3)">
+      <img class="icon" src="images/sparkles.png">
+      <h2>Coming Soon</h2>
+    </div>
+
+    <div class="game-card coming" onclick="openGame(4)">
+      <img class="icon" src="images/sparkles.png">
+      <h2>Coming Soon</h2>
+    </div>
+
+    <div class="game-card coming" onclick="openGame(5)">
+      <img class="icon" src="images/sparkles.png">
+      <h2>Coming Soon</h2>
+    </div>
+
+  </div>
+
+  <script>
+    function openGame(id) {
+      window.location.href = "game.html?id=" + id;
+    }
+  </script>
+
+</body>
+</html>
