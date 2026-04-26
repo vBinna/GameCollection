@@ -75,19 +75,21 @@ body {
 }
 
 .frame-wrapper {
-  width: 1000px;
-  height: 700px;
-  transform-origin: top center;
+  width: 100%;
+  max-width: 1920px;
+  height: auto;
   margin-top: 20px;
+  display: flex;
+  justify-content: center;
 }
 
 iframe {
-  width: 1000px;
-  height: 700px;
+  width: 100%;
+  max-width: 1920px;
+  aspect-ratio: 1920/1080;
   border: none;
   background: black;
   border-radius: 10px;
-  display: block;
 }
 
 .desc {
