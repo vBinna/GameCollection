@@ -76,7 +76,7 @@ body {
 
 .frame-wrapper {
   width: 100%;
-  max-width: 1920px;
+  max-width: 1000px;
   height: auto;
   margin-top: 20px;
   display: flex;
@@ -85,8 +85,8 @@ body {
 
 iframe {
   width: 100%;
-  max-width: 1920px;
-  aspect-ratio: 1920/1080;
+  max-width: 1000px;
+  aspect-ratio: 1000/700;
   border: none;
   background: black;
   border-radius: 10px;
